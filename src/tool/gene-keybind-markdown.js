@@ -63,6 +63,11 @@ rd.on('line', function(line) {
         
         var format = available(escape(key)) + ' | ' + available(escape(mac)) + ' | ' + intellij + ' | ';
         commandsForHeader.set(format, hasCommand(command) || commandsForHeader.get(format));
+
+        key = '';
+        mac = '';
+        command = '';
+        intellij = '';
     }
 });
 
@@ -74,8 +79,6 @@ const isMacOS          = (line) => line.match(/"mac": "(.*)"/)      !== null;
 const isCommand        = (line) => line.match(/"command": "(.*)"/)  !== null;
 const isWhen           = (line) => line.match(/"when": "(.*)"/)     !== null;
 const isIntelliJ       = (line) => line.match(/"intellij": "(.*)"/) !== null;
-const isTodo           = (line) => line.match(/"todo": "(.*)"/) !== null;
-const isNotebook       = (line) => line.match(/"notebook": "(.*)"/) !== null;
 
 const hasCommand       = (cmnd) => cmnd !== null && cmnd !== '';
 
@@ -84,7 +87,6 @@ const getWindowsOrLinux = (line) => /"key": "(.*)"/.exec(line)[1];
 const getMacOS          = (line) => /"mac": "(.*)"/.exec(line)[1];
 const getIntelliJ       = (line) => /"intellij": "(.*)"/.exec(line)[1];
 const getCommand        = (line) => /"command": "(.*)"/.exec(line)[1];
-const getTodo           = (line) => /"todo": "(.*)"/.exec(line)[1];
 
 const escape            = (line) => line.replace(/([`])/, "\\$1");
 const available         = (line) => line ? line : 'N/A';

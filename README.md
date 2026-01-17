@@ -4,8 +4,6 @@
 
 Port of IntelliJ IDEA key bindings for VS Code. Includes keymaps for popular JetBrains products like IntelliJ Ultimate, WebStorm, PyCharm, PHP Storm, etc.
 
-## Usage
-
 ### Editing
 
 Linux, Windows | macOS | Feature | Supported
@@ -14,9 +12,10 @@ ctrl+space | ctrl+space | Basic code completion (the name of any class, method o
 ctrl+shift+space | ctrl+shift+space | Smart code completion (filters the list of methods and variables by expected type) | N/A
 enter | enter | Choose Lookup Item | ✅
 tab | tab | Choose Lookup Item Replace | ✅
-ctrl+shift+enter | cmd+shift+enter | Complete statement | ✅
+ctrl+shift+enter | cmd+shift+enter | Complete Current Statement | ✅
 ctrl+p | cmd+p | Parameter info (within method call arguments) | ✅
 ctrl+q | ctrl+j | Quick documentation lookup | ✅
+N/A | f1 | Quick documentation lookup | ✅
 ctrl+f1 | shift+f1 | External Doc | N/A
 ctrl+mouseover | cmd+mouseover | Brief Info | N/A
 ctrl+f1 | cmd+f1 | Show descriptions of error or warning at caret | ✅
@@ -25,6 +24,7 @@ alt+insert | cmd+n | New... | ✅
 ctrl+o | ctrl+o | Override methods | ✅
 ctrl+i | ctrl+i | Implement methods | ✅
 ctrl+alt+t | cmd+alt+t | Surround with... (if..else, try..catch, for, synchronized, etc.) | N/A
+N/A | N/A | Open in Opposite Group | ✅
 ctrl+/ | cmd+/ | Comment/uncomment with line comment | ✅
 ctrl+numpad_divide | cmd+numpad_divide | Comment/uncomment with line comment | ✅
 ctrl+shift+/ | cmd+alt+/ | Comment/uncomment with block comment | ✅
@@ -53,8 +53,19 @@ shift+enter | shift+enter | Start new line | ✅
 ctrl+shift+u | cmd+shift+u | Toggle case for word at caret or selected block | N/A
 ctrl+shift+] | cmd+shift+] | Select till code block end | N/A
 ctrl+shift+[ | cmd+shift+[ | Select till code block start | N/A
+ctrl+right | alt+right | Cursor to word end | ✅
+ctrl+right | alt+right | Cursor to hump end | ✅
+ctrl+left | alt+left | Cursor to word start | ✅
+ctrl+left | alt+left | Cursor to hump start | ✅
+ctrl+shift+right | alt+shift+right | Select to word end | ✅
+ctrl+shift+right | alt+shift+right | Select to hump end | ✅
+ctrl+shift+left | alt+shift+left | Select to word start | ✅
+ctrl+shift+left | alt+shift+left | Select to hump start | ✅
 ctrl+delete | alt+delete | Delete to word end | ✅
+ctrl+delete | alt+delete | Delete to hump end | ✅
 ctrl+backspace | alt+backspace | Delete to word start | ✅
+ctrl+backspace | alt+backspace | Delete to hump start | ✅
+ctrl+. | cmd+. | Fold selection | ✅
 ctrl+= | cmd+= | Expand code block | ✅
 ctrl+numpad_add | cmd+numpad_add | Expand code block | ✅
 ctrl+- | cmd+- | Collapse code block | ✅
@@ -73,6 +84,8 @@ alt+shift+j | ctrl+shift+g | Unselect Occurrence | ✅
 shift+alt+down | shift+alt+down | Move Line Down | ✅
 shift+alt+up | shift+alt+up | Move Line Up | ✅
 shift+alt+insert | shift+cmd+8 | Column Selection Mode | ✅
+shift+alt+. | shift+ctrl+. | Increase Font Size in All Editors | ✅
+shift+alt+, | shift+ctrl+, | Decrease Font Size in All Editors | ✅
 
 ### Search/Replace
 
@@ -94,6 +107,8 @@ Linux, Windows | macOS | Feature | Supported
 ---------------|------|---------|----------
 alt+f7 | alt+f7 | Find usages | ✅
 alt+ctrl+f7 | alt+cmd+f7 | Show usages | ✅
+N/A | ctrl+alt+down | Next Highlighted Usage | ✅
+N/A | ctrl+alt+up | Previous Highlighted Usage | ✅
 ctrl+f7 | cmd+f7 | Find usages in file | N/A
 ctrl+shift+f7 | cmd+shift+f7 | Highlight usages in file | N/A
 ctrl+alt+f7 | cmd+alt+f7 | Show usages | N/A
@@ -106,6 +121,7 @@ ctrl+f9 | cmd+f9 | Make project (compile modifed and dependent) | ✅
 ctrl+shift+f9 | cmd+shift+f9 | Compile selected file, package or module | N/A
 alt+shift+f10 | ctrl+alt+r | Select configuration and run | ✅
 alt+shift+f9 | ctrl+alt+d | Select configuration and debug | ✅
+ctrl ctrl | ctrl ctrl | Run Anything | ✅
 shift+f10 | ctrl+r | Run | ✅
 shift+f9 | ctrl+d | Debug | ✅
 ctrl+shift+f10 | ctrl+shift+r | Run context configuration from editor | N/A
@@ -140,13 +156,9 @@ alt+right | ctrl+right | Go to next editor tab | ✅
 N/A | shift+cmd+] | Go to next editor tab | ✅
 f12 | f12 | Go back to previous tool window | N/A
 escape | escape | Go to editor (from tool window) | N/A
-shift+escape | shift+escape | Hide active or last active window (Sidebar) | ✅
-shift+escape | shift+escape | Hide active or last active window (Output) | ✅
-shift+escape | shift+escape | Hide active or last active window (Problems) | ✅
-shift+escape | shift+escape | Hide active or last active window (Debug Console) | ✅
-shift+escape | shift+escape | Hide active or last active window (Terminal) | ✅
-shift+escape | shift+escape | Hide active or last active window (Panel) | N/A
+shift+escape | shift+escape | Hide Active Tool Window | ✅
 ctrl+shift+f4 | cmd+shift+f4 | Close active run/messages/find/... tab | N/A
+ctrl+shift+' | cmd+shift+' | Maximize Tool Window (Problems, Output, Debug Console, Terminal) | ✅
 ctrl+g | cmd+l | Go to line | ✅
 ctrl+e | cmd+e | Recent files popup | ✅
 ctrl+alt+left | cmd+alt+left | Navigate back | ✅
@@ -186,6 +198,7 @@ ctrl+alt+shift+down | ctrl+alt+shift+down | Next Change | ✅
 ctrl+alt+shift+up | ctrl+alt+shift+up | Previous Change | ✅
 ctrl+home | cmd+home | Move Caret to Text Start | ✅
 ctrl+end | cmd+end | Move Caret to Text End | ✅
+ctrl+shift+m | ctrl+m | Move Caret to Matching Brace | ✅
 ctrl+shift+t | cmd+shift+t | Go to Test | ✅
 
 ### Refactoring
@@ -199,13 +212,13 @@ alt+delete | cmd+delete | Safe Delete | N/A
 shift+f6 | shift+f6 | Rename | ✅
 shift+f6 | shift+f6 | Select All Occurrences | ✅
 shift+f6 | shift+f6 | Rename (File) | ✅
-ctrl+f6 | cmd+f6 | Change Signature | N/A
+ctrl+f6 | cmd+f6 | Change Signature | ✅
 ctrl+alt+n | cmd+alt+n | Inline | N/A
 ctrl+alt+m | cmd+alt+m | Extract Method | ✅
 ctrl+alt+v | cmd+alt+v | Extract Variable | ✅
 ctrl+alt+f | cmd+alt+f | Extract Field | ✅
 ctrl+alt+c | cmd+alt+c | Extract Constant | ✅
-ctrl+alt+p | cmd+alt+p | Extract Parameter | N/A
+ctrl+alt+p | cmd+alt+p | Introduce Parameter | ✅
 
 ### VCS/Local History
 
@@ -215,6 +228,7 @@ ctrl+alt+k | cmd+k | Commit project to VCS | ✅
 ctrl+shift+k | cmd+alt+k | Push commits to VCS | ✅
 ctrl+t | cmd+t | Update project from VCS | ✅
 ctrl+alt+z | cmd+alt+z | Rollback Lines | ✅
+f4 | f4 | Jump to Source | ✅
 alt+shift+c | alt+shift+c | View recent changes | N/A
 
 ### Live Templates
@@ -248,8 +262,8 @@ alt+9 | cmd+9 | Close corresponding tool window (Git) | ✅
 alt+numpad9 | cmd+numpad9 | Close corresponding tool window (Git) | ✅
 ctrl+s | cmd+s | Save all | ✅
 ctrl+alt+y | cmd+alt+y | Synchronize | N/A
-ctrl+alt+f | ctrl+cmd+f | Toggle full screen mode | ✅
-ctrl+shift+f12 | cmd+shift+f12 | Toggle maximizing editor | ✅
+N/A | ctrl+cmd+f | Toggle full screen mode | ✅
+ctrl+shift+f12 | cmd+shift+f12 | Toggle maximizing editor | N/A
 alt+shift+f | alt+shift+f | Add to Favorites | N/A
 alt+shift+i | alt+shift+i | Inspect current file with current profile | N/A
 ctrl+\` | ctrl+\` | Quick switch current scheme | ✅
@@ -265,6 +279,8 @@ shift+f12 | shift+f12 | Restore Default layout | ✅
 Linux, Windows | macOS | Feature | Supported
 ---------------|------|---------|----------
 ctrl+d | cmd+d | Compare Files | ✅
+ctrl+d | cmd+d | Compare Selected Files | ✅
+ctrl+shift+tab | ctrl+shift+tab | Select Opposite Diff Pane | ✅
 f7 | f7 | Next difference | ✅
 shift+f7 | shift+f7 | Previous difference | ✅
 alt+ctrl+enter | alt+cmd+enter | Start new line before current | ✅
@@ -272,17 +288,37 @@ shift+ctrl+enter | shift+cmd+enter | Start new line | ✅
 alt+f12 | alt+f12 | Opens and focuses corresponding tool window (Terminal) | ✅
 alt+f12 | alt+f12 | Close corresponding tool window (Terminal) | ✅
 ctrl+shift+alt+j | ctrl+cmd+g | Sublime Text style multiple selections | ✅
-alt+left | shift+cmd+[ | Select previous tab (Terminal) | ✅
-alt+right | shift+cmd+] | Select next tab (Terminal) | ✅
+alt+left | N/A | Select previous tab (Terminal) | ✅
+alt+right | N/A | Select next tab (Terminal) | ✅
+N/A | shift+cmd+[ | Select previous tab (Terminal) | ✅
+N/A | shift+cmd+] | Select next tab (Terminal) | ✅
 alt+tab | alt+tab | Goto next splitter | ✅
 shift+alt+tab | shift+alt+tab | Goto previous splitter | ✅
 enter | enter | Open Highlighted File (Explorer) | ✅
-alt+home | alt+home | Jump to Navigation Bar | ✅
+f4 | f4 | Open Highlighted File (Explorer) | ✅
+alt+home | cmd+up | Jump to Navigation Bar | ✅
+shift+ctrl+c | shift+cmd+c | Copy paths | ✅
 
 ### CamelHumps
 
 If you enable the setting `Use "CamelHumps" words` in IntelliJ, commands like ctrl+left will go to the previous hump in camel case words, rather than the start of the word.
-For similar functionality in VS Code, enalbe the config `config.intellij-idea-keybindings.useCamelHumpsWords` under Settings.
+For similar functionality in VS Code, enalbe the config `intellij-idea-keybindings.useCamelHumpsWords` under Settings.
+
+```json
+{
+    "intellij-idea-keybindings.useCamelHumpsWords": true
+}
+```
+
+Note: CamelHumps mode with double-click is not supported.
+
+### How to disable specific key bindings of this extension
+
+If you want to disable a specific key binding of this extension, follow these steps:
+
+1. Open `File` > `Preferences` > `Keyboard Shortcuts`
+1. Search `IntelliJ IDEA Keybindings` or type directly like `"shift shift"`
+1. Right click and `Remove Keybinding`
 
 ### IntelliJ Importer
 
@@ -296,7 +332,7 @@ For similar functionality in VS Code, enalbe the config `config.intellij-idea-ke
 
 ## Installation
 
-1. Install Visual Studio Code 1.83.0 or higher
+1. Install Visual Studio Code 1.94.0 or higher
 1. Launch Code
 1. From the extension view `Ctrl`-`Shift`-`X` (Windows, Linux) or `Cmd`-`Shift`-`X` (macOS)
 1. Search and Choose the extension `Intellij IDEA Keybindings`
@@ -381,6 +417,11 @@ After the initial compile, the source files will be watched and recompiled when 
 * [@bananer](https://github.com/bananer)
 * [@ShellWen](https://github.com/ShellWen)
 * [@Strajk](https://github.com/Strajk)
+* [@LunNova](https://github.com/LunNova)
+* [@sfyr111](https://github.com/sfyr111)
+* [@grgar](https://github.com/grgar)
+* [@yasuaki640](https://github.com/yasuaki640)
+* [@dhartung](https://github.com/dhartung)
 
 ## License
 

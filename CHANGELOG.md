@@ -1,5 +1,65 @@
 # Change Log
 
+## 1.7.6 (Nov 1, 2025)
+
+* enhancement - [alt+left] in terminal is bound to change tab. See [#383](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/383)
+
+## 1.7.5 (Jun 29, 2025)
+
+* enhancement - Don't overwrite VS Code binding to accept inline completion. See [#378](https://github.com/kasecato/vscode-intellij-idea-keybindings/pull/378)
+* enhancement - Add shortcut for f4 to jump to source. See [#381](https://github.com/kasecato/vscode-intellij-idea-keybindings/pull/381)
+
+## 1.7.4 (Mar 15, 2025)
+
+* enhancement - Add Go to Next/Prev Symbol Highlight support. See [#375](https://github.com/kasecato/vscode-intellij-idea-keybindings/pull/375)
+* enhancement - Enable extension even in Non Trusted mode. See [#368](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/368)
+
+## 1.7.3 (Oct 26, 2024)
+
+* enhancement - Support Run Anything shortcut on double ctrl. See [#356](https://github.com/kasecato/vscode-intellij-idea-keybindings/pull/356)
+
+## 1.7.2 (Apr 28, 2024)
+
+* bug fix - Update shift+escape to Hide Active Tool Window. See [#349](https://github.com/kasecato/vscode-intellij-idea-keybindings/pull/349)
+* enhancement - How to disable 'double shift' press for 'Search files by name' dialog. See [#348](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/348)
+
+## 1.7.1 (Apr 20, 2024)
+
+* bug fix - jumpToNextSnippetPlaceholder on Enter unexpected behaviour. See [#347](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/343)
+* bug fix - Ctrl-Shift-F12 results in command 'workbench.action.maximizeEditor' not found. See [#341](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/341)
+
+## 1.7.0 (Apr 7, 2024)
+
+* bug fix - v1.5.10 broke ctrl+z with Dvorak keyboard layout. See [#307](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/307)
+* enhancement - Updates VSCode base files for the importe. See [#342](https://github.com/kasecato/vscode-intellij-idea-keybindings/pull/342)
+
+## 1.6.1 (Apr 1, 2024)
+
+* bug fix - Viewed file should be remembered. See [#237](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/237)
+* bug fix - keybindings of jupyter notebook. See [#281](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/281)
+* bug fix - Shortcut keys conflict with copilot. See [@335](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/335)
+* enhancement - Please Support in Using Enter to Apply Code Suggestion. See [#239](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/239)
+* enhancement - Add support for camel humps. See [#300](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/300)
+* enhancement - Add "Open in Opposite Group" Feature to Improve Editor Navigation. See [#336](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/336)
+
+## 1.6.0 (Feb 23, 2024)
+
+* bug fix - Navigate to explorer, changes. See [#119](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/119)
+* bug fix - Refactoring shortcuts not work on MacOS. See [#192](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/192)
+* bug fix - ctrl+e or cmd+e : Recent files popup \[bug\]. See [#213](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/213)
+* bug fix - CursorBottom does not work in mac. See [#229](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/229)
+* enhancement - Map F1 to quick documentation. See [#138](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/138)
+* enhancement - how can text size zoom?. See [#168](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/168)
+* enhancement - Go to bracket wrong shortcut. See [#224](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/224)
+* enhancement - ctrl+d in explorer should diff 2 selected files. See [#231](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/231)
+* enhancement - FR: F4 in explorer to open file. See [#232](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/232)
+
+## 1.5.13 (Jan 28, 2024)
+
+* bug fix - copyFilePath: add !terminalFocus to condition . See [#317](https://github.com/kasecato/vscode-intellij-idea-keybindings/pull/317)
+* enhancement - Fold & Collapse. See [#55](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/55)
+* enhancement - MacOS: Shift + Cmd + (Maxmize Tool Window) can be mapped to Toggle Maximized Panel. See [#105](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/105)
+
 ## 1.5.12 (Oct 20, 2023)
 
 * revert - Commenting to move to next line as in Idea. See [#233](https://github.com/kasecato/vscode-intellij-idea-keybindings/issues/233)
